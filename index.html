@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viperware</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+    <link rel="manifest" href="./assets/img/site.webmanifest">
+</head>
+<body>
+
+    <header class="header">
+        <img src="./assets/img/viperware-logo.png" alt="logo" class="logo">
+        <nav class="navbar">
+            <i class="fa-solid fa-bars menu-icon"></i>
+            <ul class="navbar-list">
+                <li><a class="navbar-item" href="#home">Home</a></li>
+                <span class="divider"></span>
+                <li><a class="navbar-item" href="#about">About Us</a></li>
+                <span class="divider"></span>
+                <li><a class="navbar-item" href="#explore">Explore</a></li>
+                <span class="divider"></span>
+                <li><a class="navbar-item" href="#products">Products</a></li>
+                <span class="divider"></span>
+                <li><a class="navbar-item" href="#contact">Contact</a></li>
+                <span class="divider"></span>
+            </ul>
+
+            <div class="search">
+                <input type="text" class="search-text" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass search-btn"></i>
+            </div>
+
+            <i class="fa-solid fa-cart-shopping cart-icon"></i>
+            <div class="cart">
+                <h3>Your Cart</h3>
+                <span class="cart-divider"></span>
+                <div class="cart-container">
+
+                    <!-- <div class="cart-product">
+                        <img src="./assets/img/products/king-cobra4.png" alt="" class="cart-product-img">
+                        <div class="cart-product-description">
+                            <span>Black Mamba 300</span>
+                            <p>Price: <span>999.99$</span></p>
+                            <div class="quantity-handler">
+                                <p>Quantity:</p>
+                                <button class="quantity-btn btn">-</button>
+                                <span>1</span>
+                                <button class="quantity-btn btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-product">
+                        <img src="./assets/img/products/black-mamba1.png" alt="" class="cart-product-img">
+                        <div class="cart-product-description">
+                            <span>Black Mamba 300</span>
+                            <p>Price: <span>999.99$</span></p>
+                            <div class="quantity-handler">
+                                <p>Quantity:</p>
+                                <button class="quantity-btn btn">-</button>
+                                <span>1</span>
+                                <button class="quantity-btn btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-product">
+                        <img src="./assets/img/products/black-mamba1.png" alt="" class="cart-product-img">
+                        <div class="cart-product-description">
+                            <span>Black Mamba 300</span>
+                            <p>Price: <span>999.99$</span></p>
+                            <div class="quantity-handler">
+                                <p>Quantity:</p>
+                                <button class="quantity-btn btn">-</button>
+                                <span>1</span>
+                                <button class="quantity-btn btn">+</button>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+                <span class="cart-divider"></span>
+                <div class="cart-total">
+                    <p>You have <span class="total total-quantity"></span> items in cart.</p>
+                    <p>Subtotal: <span class="total total-price">10$</span></p>
+                </div>
+                <button class="btn-buy btn">Buy</button>
+                <button class="btn-delete btn">Empty Cart</button>
+            </div>
+
+            <a href="./pages/login.html"><i class="fa-solid fa-user login"></i></a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <img src="./assets/img/hero-cover.png" alt="hero img" class="hero-img hero-desktop">
+            <div class="hero-container">
+                <div class="hero-info">
+                    <h1 class="hero-title">Discover Viperware</h1>
+                    <p class="hero-text">Experience innovation and top of the line components, style and customization with Viperware.</p>
+                    <a href="#about" class="hero-btn btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about">
+            <img src="./assets/img/viperware-logo.png" alt="viperware logo" class="about-bg">
+            <p class="about-text">
+                From cutting-edge gaming and creator laptops to high-end components for your dream PC build, Viperware systems are meticulously crafted to provide the ultimate performance for work and play. Supported by our diverse collection of gamer accessories and PC peripherals, we’ve got you covered when it comes to your unique gaming or office desktop needs.
+            </p>
+        </div>
+    </section>
+
+    <section id="explore">
+        <div class="cards">
+            <div class="card-content">
+                <div class="img-container">
+                    <img src="./assets/img/laptop-rgb.png" alt="RGB laptop" class="card-img">
+                </div>
+                <div class="card-info content-odd">
+                    <h3 class="card-title">Captivating Design</h3>
+                    <p class="card-text">With gaming RGB lighting and full metal chassis, Viperware laptops are ensured to stand out.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="img-container">
+                    <img src="./assets/img/laptops.jpg" alt="laptops" class="card-img">
+                </div>
+                <div class="card-info content-even">
+                    <h3 class="card-title">Leading Performance</h3>
+                    <p class="card-text">16" and 18" gaming laptops paired with the best specs to take gaming to a new level.</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="img-container">
+                    <img src="./assets/img/setup.png" alt="setup" class="card-img">
+                </div>
+                <div class="card-info content-odd">
+                    <h3 class="card-title">Build your Dream Setup</h3>
+                    <p class="card-text">Make the ideal gaming PC setup that perfectly fits every individual need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+
+        <div class="products">
+            <div class="products-container">
+                <h2 class="product-title">Products</h2>
+                <div class="product-categories">
+                    <button class="product-category btn active">All</button>
+                    <button class="product-category btn" data-category="desktop">Desktops</button>
+                    <button class="product-category btn" data-category="laptop">Laptops</button>
+                    <button class="product-category btn" data-category="extra">Accessories</button>
+                </div>
+
+                <p>boton de prueba</p>
+                <button class="btn item-buy-btn">Add to Cart</button>
+
+                <!-- <div class="products-list">
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/king-cobra1.png" alt="" class="item-img">
+                        <div class="item-details">
+                            <span class="item-name">King Cobra 300</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i5-12400F processor Hexa-core 2.50 GHz</li>
+                                <li class="item-spec">NVIDIA® GeForce® RTX™ 3060 with 8 GB dedicated memory</li>
+                                <li class="item-spec">16 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">512 GB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$999.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/king-cobra2.png" alt="" class="item-img">
+                        <div class="item-details">
+                            <span class="item-name">King Cobra 500</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i7-12700F processor Dodeca-core 2.10 GHz</li>
+                                <li class="item-spec">NVIDIA® GeForce RTX™ 3070 with 8 GB dedicated memory</li>
+                                <li class="item-spec">16 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">1 TB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$1,999.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/king-cobra3.png" alt="" class="item-img">
+                        <div class="item-details">
+                            <span class="item-name">King Cobra 700</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i7-12700K processor Dodeca-core 3.60 GHz</li>
+                                <li class="item-spec">NVIDIA® GeForce RTX™ 3080 with 10 GB dedicated memory</li>
+                                <li class="item-spec">32 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">2 TB HDD, 1 TB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$2,999.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/king-cobra4.png" alt="" class="item-img">
+                        <div class="item-details">
+                            <span class="item-name">King Cobra 900</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i9-12900K processor Hexadeca-core</li>
+                                <li class="item-spec">NVIDIA® GeForce RTX™ 3090 with 24 GB dedicated memory</li>
+                                <li class="item-spec">32 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">2 TB HDD, 1 TB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$3,999.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/black-mamba1.png" alt="" class="item-img-laptop">
+                        <div class="item-details">
+                            <span class="item-name">Black Mamba 300</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i5-13500H processor Dodeca-core 2.60 GHz</li>
+                                <li class="item-spec">NVIDIA® GeForce RTX™ 4050 with 6 GB dedicated memory</li>
+                                <li class="item-spec">16" WQXGA (2560 x 1600) 16:10 165 Hz</li>
+                                <li class="item-spec">8 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">512 GB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$1,199.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/black-mamba2.png" alt="" class="item-img-laptop">
+                        <div class="item-details">
+                            <span class="item-name">Black Mamba 500</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i7-12700H processor Tetradeca-core 2.30 GHz
+                                </li>
+                                <li class="item-spec">NVIDIA® GeForce RTX™ 4060 with 8 GB dedicated memory</li>
+                                <li class="item-spec">16" WQXGA (2560 x 1600) 16:10 165 Hz</li>
+                                <li class="item-spec">16 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">512 GB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$1,599.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/black-mamba3.png" alt="" class="item-img-laptop">
+                        <div class="item-details">
+                            <span class="item-name">Black Mamba 700</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i7-13700HX processor Hexadeca-core 2.10 GHz
+                                </li>
+                                <li class="item-spec">NVIDIA® GeForce RTX™ 4070 with 8 GB dedicated memory</li>
+                                <li class="item-spec">16" WQXGA (2560 x 1600) 16:10 IPS 240 Hz</li>
+                                <li class="item-spec">16 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">1 TB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$1,999.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/black-mamba4.png" alt="" class="item-img-laptop">
+                        <div class="item-details">
+                            <span class="item-name">Black Mamba 900</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Windows 11 Home</li>
+                                <li class="item-spec">Intel® Core™ i9-13900HX processor 2.20 GHz</li>
+                                <li class="item-spec">NVIDIA® GeForce RTX™ 4080 with 12 GB dedicated memory</li>
+                                <li class="item-spec">16" WQXGA (2560 x 1600) 16:10 165 Hz</li>
+                                <li class="item-spec">32 GB, DDR5 SDRAM</li>
+                                <li class="item-spec">1 TB SSD</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$2,499.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/keyboard.png" alt="" class="item-img-extra">
+                        <div class="item-details">
+                            <span class="item-name">Viperware Gaming keyboard</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Mechanical Keys</li>
+                                <li class="item-spec">1ms Response Time</li>
+                                <li class="item-spec">Programmable profile settings</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$99.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/mouse1.png" alt="" class="item-img-extra">
+                        <div class="item-details">
+                            <span class="item-name">Viperware Wireless Mouse</span>
+                            <ul class="item-list">
+                                <li class="item-spec">2.4GHz Wireless and USB Wired Mode</li>
+                                <li class="item-spec">3 Programmable side buttons</li>
+                                <li class="item-spec">Battery Life: 50 hours</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$79.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/mouse2.png" alt="" class="item-img-extra">
+                        <div class="item-details">
+                            <span class="item-name">Viperware Wired Mouse</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Instant Response Time</li>
+                                <li class="item-spec">3 Programmable side buttons</li>
+                                <li class="item-spec">RGB lighting</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$59.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./assets/img/products/headset.png" alt="" class="item-img-extra">
+                        <div class="item-details">
+                            <span class="item-name">Viperware Gaming Headset</span>
+                            <ul class="item-list">
+                                <li class="item-spec">Binaural headpiece</li>
+                                <li class="item-spec">Noise-camcelling microphone</li>
+                                <li class="item-spec">Neodymium drivers</li>
+                            </ul>
+                        </div>
+                        <div class="item-buy">
+                            <span class="item-price">$89.99
+                                    </span>
+                            <button class="item-buy-btn btn">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+
+                </div> -->
+
+                <div class="products-list">
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <h3 class="contact-title">Contact Us</h3>
+            <div class="contact-container">
+
+                <div class="contact-metod-container">
+                    <div class="contact-metod">
+                        <i class="fa-solid fa-phone contact-icon"></i>
+                        <p class="contact-text">+123-456789</p>
+                    </div>
+                    <div class="contact-metod">
+                        <i class="fa-solid fa-at contact-icon"></i>
+                        <p class="contact-text">contact@viperware.com</p>
+                    </div>
+                    <div class="contact-metod">
+                        <i class="fa-solid fa-location-dot contact-icon"></i>
+                        <p class="contact-text">4467 Warner Street Miami, Florida</p>
+                    </div>
+                </div>
+
+                <div class="contact-map"><iframe class="map" frameborder="0" scrolling="no" marginheight="0"
+                        marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=405%20SW%2029th%20Ct,%20Miami,%20FL%2033135,%20United%20States+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                            href="https://www.maps.ie/distance-area-calculator.html"></a></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <i class="fa-brands fa-instagram footer-icon"></i>
+            <i class="fa-brands fa-youtube footer-icon"></i>
+            <i class="fa-brands fa-twitter footer-icon"></i>
+            <i class="fa-brands fa-facebook footer-icon"></i>
+        </div>
+
+        <img src="./assets/img/viperware-logo.png" alt="logo" class="footer-logo">
+
+        <p class="copyright">Copyright © 2023 Viperware</p>
+    </footer>
+    <script src="./assets/data.js"></script>
+    <script src="./assets/main.js"></script>
+</body>
+</html>
