@@ -9,10 +9,8 @@ const buyBtn = document.querySelector(`.btn-buy`);
 const emptyCartBtn = document.querySelector(`.btn-delete`);
 
 const productsContainer = document.querySelector(`.products-list`);
-const categoriesContainer = document.querySelector(`.product-categories`);
+const categoriesContainer = document.querySelector(`.product-categories-container`);
 const productCategory = document.querySelectorAll(`.product-category`);
-
-const addToCart = document.querySelector(`.item-buy-btn`);
 
 // USD price format
 
