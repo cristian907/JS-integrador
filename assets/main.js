@@ -7,6 +7,7 @@ const cartQuantity = document.querySelector(`.total-quantity`);
 const cartTotal = document.querySelector(`.total-price`);
 const buyBtn = document.querySelector(`.btn-buy`);
 const emptyCartBtn = document.querySelector(`.btn-delete`);
+const overlay = document.querySelector(`.overlay`);
 
 const productsContainer = document.querySelector(`.products-list`);
 const categoriesContainer = document.querySelector(`.product-categories-container`);
@@ -187,6 +188,7 @@ const toggleMenu = () => {
 
 const toggleCart = () => {
     cartMenu.classList.toggle(`open`);
+    overlay.classList.toggle(`hidden`);
     if (navMenu.classList.contains(`open`)) {
         navMenu.classList.remove(`open`);
         navIcon.classList.remove(`open-icon`);
@@ -200,6 +202,10 @@ const closeOnClick = (e) => {
     if (!e.target.classList.contains(`navbar-item`)) return;
     navMenu.classList.remove(`open`);
     navIcon.classList.remove(`open-icon`);
+};
+
+const closeCartOnClick = () => {
+    toggleCart();
 };
 
 // cart
@@ -471,6 +477,7 @@ const init = () => {
     navIcon.addEventListener(`click`, toggleMenu);
     cartIcon.addEventListener(`click`, toggleCart);
     navMenu.addEventListener(`click`, closeOnClick);
+    overlay.addEventListener(`click`, closeCartOnClick);
     document.addEventListener(`DOMContentLoaded`, renderCart);
     document.addEventListener(`DOMContentLoaded`, renderCartTotal);
     productsContainer.addEventListener(`click`, addProduct);
