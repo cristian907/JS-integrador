@@ -12,6 +12,13 @@ const productsContainer = document.querySelector(`.products-list`);
 const categoriesContainer = document.querySelector(`.product-categories-container`);
 const productCategory = document.querySelectorAll(`.product-category`);
 
+const contactForm = document.querySelector(`.contact-form`);
+const contactName = document.querySelector(`#contact-name`);
+const contactMail = document.querySelector(`#contact-mail`);
+const contactMsg = document.querySelector(`#contact-text`);
+const contactSubmit = document.querySelector(`#contact-submit`);
+const error = document.querySelector(`#contact-error`);
+
 // USD price format
 
 let usd = new Intl.NumberFormat(`en-US`, {
@@ -44,10 +51,35 @@ const createProductTemplate = (product) => {
         price,
         category,
     } = product;
-    if (category == `desktop` || category == `laptop`) {
+    if (category == `desktop`) {
         return `
     <div class="product-item">
-    <img src=${productImg} alt=${name} class="item-img">
+        <img src=${productImg} alt=${name} class="item-img">
+        <div class="item-details">
+            <span class="item-name">${name}</span>
+            <ul class="item-list">
+                <li class="item-spec">${productSystem}</li>
+                <li class="item-spec">${productCpu}</li>
+                <li class="item-spec">${productGpu}</li>
+                <li class="item-spec">${productRam}</li>
+                <li class="item-spec">${productStorage}</li>
+            </ul>
+        </div>
+        <div class="item-buy">
+            <span class="item-price">${usd.format(price)}</span>
+            <button id="boton" class="item-buy-btn btn" 
+            data-id="${id}"
+            data-name="${name}"
+            data-price="${price}"
+            data-img="${productImg}">Add to Cart</button>
+        </div>
+    </div>`;
+    }
+
+    if (category == `laptop`) {
+        return `
+    <div class="product-item">
+        <img src=${productImg} alt=${name} class="item-img-laptop">
         <div class="item-details">
             <span class="item-name">${name}</span>
             <ul class="item-list">
@@ -168,13 +200,6 @@ const closeOnClick = (e) => {
     if (!e.target.classList.contains(`navbar-item`)) return;
     navMenu.classList.remove(`open`);
     navIcon.classList.remove(`open-icon`);
-};
-
-const closeOnScroll = () => {
-    if (!navMenu.classList.contains(`open`) && !cartMenu.classList.contains(`open`)) return;
-    navMenu.classList.remove(`open`);
-    navIcon.classList.remove(`open-icon`);
-    cartMenu.classList.remove(`open`);
 };
 
 // cart
@@ -341,23 +366,121 @@ const deleteCart = () => {
     completeCartAction(`Do you want to empty your cart?`, `The cart is empty.`);
 };
 
-//
+// contact
 
-function init() {
+const isEmpty = (input) => {
+    return !input.value.trim().length;
+};
+
+const isBetween = (input, min, max) => {
+    return input.value.length >= min && input.value.length <= max;
+};
+
+const isEmailValid = (input) => {
+    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    return re.test(input.value.trim());
+};
+
+const showError = (msg) => {
+    error.classList.add(`error`);
+    error.classList.remove(`hidden`);
+    error.innerText = msg;
+};
+
+const showSuccess = () => {
+    error.classList.remove(`error`);
+    error.classList.add(`hidden`);
+    error.innerText = ``;
+};
+
+const checkNameInput = (input) => {
+    let valid = false;
+    const min = 3;
+    const max = 25;
+
+    if (isEmpty(input)) {
+        showError(`All fields are required`);
+        return;
+    }
+
+    if (!isBetween(input, min, max)) {
+        showError(`Your name must be between ${min} and ${max} letters`);
+        return;
+    }
+
+    valid = true;
+    return valid;
+};
+
+const checkEmailInput = (input) => {
+    let valid = false;
+
+    if (isEmpty(input)) {
+        showError(`All fields are required`);
+        return;
+    }
+
+    if (!isEmailValid(input)) {
+        showError(`The email is not valid`);
+        return;
+    }
+
+    valid = true;
+    return valid;
+};
+
+const checkMessageInput = (input) => {
+    let valid = false;
+    const min = 30;
+    const max = 500;
+
+    if (isEmpty(input)) {
+        showError(`All fields are required`);
+        return;
+    }
+
+    if (!isBetween(input, min, max)) {
+        showError(`The message must be between ${min} and ${max} letters`);
+        return;
+    }
+
+    valid = true;
+    return valid;
+};
+
+const validateForm = (e) => {
+    e.preventDefault;
+
+    let isNameValid = checkNameInput(contactName);
+    let isMailValid = checkEmailInput(contactMail);
+    let isMsgValid = checkMessageInput(contactMsg);
+
+    let isValidForm = isNameValid && isMailValid && isMsgValid;
+    if (isValidForm) {
+        showSuccess();
+        setTimeout(() => {
+            window.alert(`Form sent succesfully!`);
+            contactForm.reset();
+        }, 100);
+    }
+};
+
+const init = () => {
     renderProducts(productsData);
     categoriesContainer.addEventListener(`click`, applyFilter);
     navIcon.addEventListener(`click`, toggleMenu);
     cartIcon.addEventListener(`click`, toggleCart);
-    // navMenu.addEventListener(`click`, closeOnClick);
-    // window.addEventListener(`scroll`, closeOnScroll);
+    navMenu.addEventListener(`click`, closeOnClick);
     document.addEventListener(`DOMContentLoaded`, renderCart);
     document.addEventListener(`DOMContentLoaded`, renderCartTotal);
     productsContainer.addEventListener(`click`, addProduct);
     cartProducts.addEventListener(`click`, handleQuantity);
     buyBtn.addEventListener(`click`, completeBuy);
     emptyCartBtn.addEventListener(`click`, deleteCart);
+    contactSubmit.addEventListener(`click`, validateForm);
+
     disableBtn(buyBtn);
     disableBtn(emptyCartBtn);
-}
+};
 
 init();

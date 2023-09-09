@@ -45,53 +45,13 @@
                 <span class="cart-divider"></span>
                 <div class="cart-container">
 
-                    <!-- <div class="cart-product">
-                        <img src="./assets/img/products/king-cobra4.png" alt="" class="cart-product-img">
-                        <div class="cart-product-description">
-                            <span>Black Mamba 300</span>
-                            <p>Price: <span>999.99$</span></p>
-                            <div class="quantity-handler">
-                                <p>Quantity:</p>
-                                <button class="quantity-btn btn">-</button>
-                                <span>1</span>
-                                <button class="quantity-btn btn">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-product">
-                        <img src="./assets/img/products/black-mamba1.png" alt="" class="cart-product-img">
-                        <div class="cart-product-description">
-                            <span>Black Mamba 300</span>
-                            <p>Price: <span>999.99$</span></p>
-                            <div class="quantity-handler">
-                                <p>Quantity:</p>
-                                <button class="quantity-btn btn">-</button>
-                                <span>1</span>
-                                <button class="quantity-btn btn">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-product">
-                        <img src="./assets/img/products/black-mamba1.png" alt="" class="cart-product-img">
-                        <div class="cart-product-description">
-                            <span>Black Mamba 300</span>
-                            <p>Price: <span>999.99$</span></p>
-                            <div class="quantity-handler">
-                                <p>Quantity:</p>
-                                <button class="quantity-btn btn">-</button>
-                                <span>1</span>
-                                <button class="quantity-btn btn">+</button>
-                            </div>
-                        </div>
-                    </div> -->
-
                 </div>
                 <span class="cart-divider"></span>
                 <div class="cart-total">
                     <p>You have <span class="total total-quantity"></span> items in cart.</p>
                     <p>Subtotal: <span class="total total-price">10$</span></p>
                 </div>
-                <button class="btn-buy btn">Buy</button>
+                <button class="btn-buy btn">Checkout</button>
                 <button class="btn-delete btn">Empty Cart</button>
             </div>
 
@@ -180,25 +140,39 @@
             <h3 class="contact-title">Contact Us</h3>
             <div class="contact-container">
 
+                <div class="contact-form-container">
+                    <form class="contact-form" novalidate>
+                        <div class="input-container">
+                            <input type="text" id="contact-name" class="form-input" placeholder=" " required>
+                            <label for="contact-name" class="form-label">Name</label>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="email" id="contact-mail" class="form-input" placeholder=" " required>
+                            <label for="contact-mail" class="form-label">Email</label>
+                        </div>
+
+                        <div class="input-container">
+                            <textarea placeholder=" " name="comment" id="contact-text" class="form-comment" cols="30"
+                                rows="10" required></textarea>
+                            <label for="contact-text" class="comment-label">Message</label>
+                        </div>
+                        <span class="hidden" id="contact-error"></span>
+                        <submit class="btn" id="contact-submit">Submit</submit>
+                    </form>
+                </div>
+
                 <div class="contact-metod-container">
-                    <div class="contact-metod">
-                        <i class="fa-solid fa-phone contact-icon"></i>
-                        <p class="contact-text">+123-456789</p>
-                    </div>
-                    <div class="contact-metod">
-                        <i class="fa-solid fa-at contact-icon"></i>
-                        <p class="contact-text">contact@viperware.com</p>
-                    </div>
                     <div class="contact-metod">
                         <i class="fa-solid fa-location-dot contact-icon"></i>
                         <p class="contact-text">4467 Warner Street Miami, Florida</p>
                     </div>
-                </div>
 
-                <div class="contact-map"><iframe class="map" frameborder="0" scrolling="no" marginheight="0"
-                        marginwidth="0"
-                        src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=405%20SW%2029th%20Ct,%20Miami,%20FL%2033135,%20United%20States+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                            href="https://www.maps.ie/distance-area-calculator.html"></a></iframe>
+                    <div class="contact-map"><iframe class="map" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"
+                            src="https://maps.google.com/maps?width=100%25&amp;height=100%25&amp;hl=en&amp;q=405%20SW%2029th%20Ct,%20Miami,%20FL%2033135,%20United%20States+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                href="https://www.maps.ie/distance-area-calculator.html"></a></iframe>
+                    </div>
                 </div>
             </div>
         </div>

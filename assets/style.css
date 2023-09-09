@@ -80,7 +80,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem;
+    padding: 0 2rem;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -109,11 +109,11 @@ body {
 }
 
 .navbar {
-    gap: 3rem;
+    gap: 2.2rem;
 }
 
 .navbar-list {
-    gap: 1.3rem;
+    gap: 1.2rem;
 }
 
 .navbar-item {
@@ -449,22 +449,7 @@ body {
     padding: 1rem;
     width: 8rem;
     text-align: center;
-    /* font-size: 1rem; */
 }
-
-/* .product-category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    padding-top: 1rem;
-}
-
-.category-title {
-    font-size: 2rem;
-    color: var(--accent);
-} */
 
 .products-list {
     display: flex;
@@ -488,11 +473,13 @@ body {
 
 .item-img {
     width: 10%;
+    min-width: 4rem;
 }
 
 .item-img-laptop,
 .item-img-extra {
     width: 20%;
+    min-width: 8rem;
 }
 
 .item-details {
@@ -536,6 +523,7 @@ body {
     font-size: 1.1rem;
     padding: .5rem 1rem;
     cursor: pointer;
+    width: 8rem;
 }
 
 /* contact */
@@ -556,13 +544,69 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 9rem;
     width: 100%;
+}
+
+.contact-form-container {
+    width: 40%;
+    max-width: 30rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-tertiary);
+    padding: 2rem;
+    gap: 2.5rem;
+    border-radius: 10px;
+}
+
+.form-comment {
+    background: none;
+    border: 1px solid var(--text-secondary);
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+    resize: none;
+}
+
+.comment-label {
+    padding-top: 1rem;
+    position: absolute;
+    top: -1.4rem;
+    left: 0;
+    color: var(--text-secondary);
+    cursor: text;
+    transition: all .3s;
+    transform: translate(-10%, 0) scale(.8);
+}
+
+.form-comment:placeholder-shown+.comment-label {
+    transform: scale(1);
+}
+
+.form-comment:focus+.comment-label {
+    transform: translate(-10%, 0) scale(.8);
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    display: block;
+    color: red;
 }
 
 .contact-metod-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -578,7 +622,7 @@ body {
 }
 
 .contact-map {
-    width: 30%;
+    width: 100%;
 }
 
 .map {
@@ -624,7 +668,7 @@ body {
 
 /* login */
 
-.login-container {
+.form-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -652,7 +696,7 @@ body {
     position: relative;
 }
 
-.login-input {
+.form-input {
     background: none;
     border: 1px var(--text-secondary);
     border-style: none none solid none;
@@ -662,7 +706,7 @@ body {
     font-size: 1rem;
 }
 
-.login-label {
+.form-label {
     position: absolute;
     bottom: .2rem;
     left: 0;
@@ -672,11 +716,11 @@ body {
     cursor: text;
 }
 
-.login-input:placeholder-shown+.login-label {
+.form-input:placeholder-shown+.form-label {
     transform: translate(0, 0) scale(1);
 }
 
-.login-input:focus+.login-label {
+.form-input:focus+.form-label {
     transform: translate(-10%, -100%) scale(.8);
 }
 
@@ -805,7 +849,7 @@ body {
 
     /* products */
 
-    .product {
+    .products-container {
         width: 90%;
         gap: 2.5rem;
     }
@@ -814,13 +858,19 @@ body {
 
     .contact-container {
         flex-direction: column;
+        gap: 6rem;
+    }
+
+    .contact-form-container {
+        width: 70%;
     }
 
     .contact-map {
-        width: 50%;
+        width: 90%;
     }
 
     /* login */
+    /* cambiar */
 
     .login-form {
         width: 60%;
@@ -901,7 +951,7 @@ body {
 
     /* products */
 
-    .product {
+    .products-container {
         gap: 2rem;
         padding: 2rem;
     }
@@ -911,7 +961,12 @@ body {
         justify-content: center;
     }
 
+    .item-name {
+        text-align: center;
+    }
+
     /* login */
+    /* cambiar */
 
     .login-form {
         width: 70%;
@@ -958,6 +1013,17 @@ body {
     html {
         font-size: 22px;
     }
+
+    .navbar {
+        gap: 3rem;
+    }
+
+    .navbar-list {
+        gap: 1.2rem;
+    }
+
+
+    /* cambiar */
 
     .login-form {
         width: 30%;

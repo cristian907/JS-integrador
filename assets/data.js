@@ -21,7 +21,7 @@ const productsData = [
         productRam: `16 GB, DDR5 SDRAM`,
         productStorage: `1 TB SSD`,
         category: `desktop`,
-        price: 1999.99,
+        price: 1699.99,
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const productsData = [
         productRam: `32 GB, DDR5 SDRAM`,
         productStorage: `2 TB SSD`,
         category: `desktop`,
-        price: 2999.99,
+        price: 2399.99,
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const productsData = [
         productRam: `32 GB, DDR5 SDRAM`,
         productStorage: `2 TB SSD`,
         category: `desktop`,
-        price: 3999.99,
+        price: 2999.99,
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ const productsData = [
         productRam: `8 GB, DDR5 SDRAM`,
         productStorage: `512 GB SSD`,
         category: `laptop`,
-        price: 1199.99,
+        price: 799.99,
     },
     {
         id: 6,
@@ -69,7 +69,7 @@ const productsData = [
         productRam: `16 GB, DDR5 SDRAM`,
         productStorage: `512 GB SSD`,
         category: `laptop`,
-        price: 1599.99,
+        price: 1399.99,
     },
     {
         id: 7,
@@ -81,7 +81,7 @@ const productsData = [
         productRam: `16 GB, DDR5 SDRAM`,
         productStorage: `1 TB SSD`,
         category: `laptop`,
-        price: 1999.99,
+        price: 1899.99,
     },
     {
         id: 8,
@@ -93,7 +93,7 @@ const productsData = [
         productRam: `32 GB, DDR5 SDRAM`,
         productStorage: `1 TB SSD`,
         category: `laptop`,
-        price: 2499.99,
+        price: 2399.99,
     },
     {
         id: 9,
